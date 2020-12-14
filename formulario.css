@@ -1,0 +1,314 @@
+:root{
+    --colorTextos: #08000067;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+}
+body .flotante{
+        background: #2980B9;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9);  
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9); 
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height:750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    width:100% ;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    overflow: visible;
+}
+
+header nav{
+    height: 13.5%;
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); 
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    justify-content: space-between;
+}
+
+h1{
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 800;
+    color: #095268;  
+  
+   
+}
+
+body form{
+    background: #fff;
+    width: 45% ;
+    height: 65%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px 0 rgb(255, 255, 255, 0.8);
+}
+
+body form .grupo{
+    position: relative;
+    margin: 18px;
+}
+body input, textarea{
+    background: none;
+    color:#c6c6c6;
+    font-size: 18px;
+    padding: 12px 12px 12px 7px;
+    display: block;
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid var(--colorTextos);
+    resize: none;
+}
+
+input:focus,textarea:focus{
+    outline: none;
+    color: rgb(7, 7, 7);
+}
+
+input:focus~label, 
+input:valid~label, 
+textarea:focus~label, textarea:valid~label{
+    position: absolute;
+    top: -20px;
+    font-size: 14px;
+    color: #21f3f3;
+}
+
+label{
+    color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    left: 7px;
+    top: 10px;
+    transition: 0.7s ease all;
+    pointer-events: none;
+}
+
+
+input:focus~.barra::before, textarea:focus~.barra::before{
+    width: 100%;
+}
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.barra::before{
+    content: '';
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #07dbe2, #80e957);
+    transition: 0.6s ease all;
+    left: 0%;
+}
+button{
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9);  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9); 
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: block;
+    width: 100px;
+    height: 45px;
+    border:none;
+    color:#fff; 
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.contenedor{
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-contenedor{
+    width: 100%;
+    display: flex;
+}
+
+.slider{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.slider > img{
+    width: 100%;
+    height:180px;
+}
+
+
+
+@media screen and (max-width:1100px){
+    form{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:600px){
+    form{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:450px){
+    form{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:300px){
+    form{
+        width: 90%;
+    }
+}
+
+
+.icono{
+    display: none;
+}
+
+.enlaces{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    justify-content: space-around ;
+    align-items: center;
+}
+
+.enlaces a{
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    padding: 1px 0;
+    transition: 0.5s ease-out;
+    color: #fff;
+    text-decoration: none;
+}
+
+.enlaces a:hover, .active{
+    border-top: 1px solid #0c0c0c;
+    border-bottom: 1px solid #070707;
+}
+
+nav .logo{
+    height: 100%;
+    background:none;
+    margin-left: 80px;
+}
+
+nav .logo img{
+    object-fit: cover;
+    height: inherit;
+}
+
+header .textos{
+    text-align: center;
+    color: rgb(104, 23, 211);
+    margin-top: 150px;
+}
+
+footer{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(15, 169, 216);
+    font-family: cursive;
+    font-size: 28px;
+    position: relative;
+    top: 390px;
+}
+    
+a{
+	text-decoration: none;
+	color: rgb(252, 252, 252);
+}
+
+@media screen and (max-width:750px){
+    .icono{
+        display: flex;
+        justify-content: center;
+        height: 60px;
+        align-items: center;
+        color: #030005;
+        background: transparent;
+        padding: 20px;
+        z-index: 100;
+        cursor: pointer;
+        margin-right: 40px;
+    }
+
+    header .textos h1{
+        font-size: 75px;
+    }
+
+    
+    .enlaces{
+        position: fixed;
+        height: 100vh;
+        width: 30vh;
+        right: 0;
+        flex-direction: column;
+        transition: all 1s ease;
+        background: #2980B9;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top, #FFFFFF, #6DD5FA, #51a9e4);  
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top, #0a57bb, #6DD5FA, #4db0f1); 
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        border-radius: 10px;
+    box-shadow: 0 0 8px 0 rgb(255, 255, 255, 0.8);
+
+        
+  
+  
+    }
+
+    .uno {
+        clip-path: ellipse(0% 40% at 100% 0%);
+    }
+
+    .dos {
+        clip-path: ellipse(150% 100% at 80% 0%);
+    }
+
+}
+
+@media screen and (max-width:400px){
+    nav .logo{
+        margin-left: 20px;
+    }
+    .icono{
+        margin-right:20px;
+    }
+
+    header .textos h1 {
+        font-size: 65px;
+    }
+}
